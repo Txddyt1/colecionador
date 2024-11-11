@@ -1,0 +1,29 @@
+DROP DATABASE IF EXISTS dbcolecao;
+
+CREATE DATABASE dbcolecao;
+
+USE dbcolecao;
+
+
+CREATE TABLE usuario (
+idusuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(255),
+email VARCHAR(255),
+login VARCHAR(255),
+senha VARCHAR(255),
+datacadastro DATE,
+dataexpiracao DATE
+);
+
+
+CREATE TABLE moeda (
+idmoeda INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+idusuario INT, FOREIGN KEY (idusuario) REFERENCES usuario (idusuario),
+nome VARCHAR(255),
+pais VARCHAR(255),
+ano INT,
+valor DECIMAL(10,2),
+detalhes VARCHAR(255),
+datacadastro DATE,
+imagem LONGBLOB
+);

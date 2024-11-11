@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+:root {
+    --cor-fundo: #C6C6C6;
+    --cor-modal: rgba(0,0,0,0.5);
+    --cor-sombra-modal: rgba(0,0,0,0.6);
+
+    --cor-fonte: #03e9f4;
+    --cor-branco: #FFFFFF;
+    --cor-preto: #000000;
+    --cor-nav: #636362;
+
+    --cor-linha-principal: #FFFAFA;
+    --cor-linha-secundaria: #F5F5F5;
+
+    --fonte: "SUSE", system-ui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-fundo);
+    font-family: var(--fonte);
+    font-size: 16px;
+}
+
+header {
+    background-color: var(--cor-nav);
+    color: var(--cor-branco);
+}
+
+#navdetudo {
+    display: flex;
+    align-items: center;
+}
+
+#navdetudo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+#navdetudo ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding-right: 100px;
+    
+}
+
+#navdetudo ul li {
+    padding: 15px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#navdetudo ul li:hover {
+    background-color: #03e9f4;
+    border-radius: 12px;
+    padding: 15px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#navdetudo ul li a {
+    text-decoration: none;
+    color: var(--cor-modal);
+    font-weight: bold;
+}

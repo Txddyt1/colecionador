@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+:root {
+    --cor-fundo: #C6C6C6;
+    --cor-modal: rgba(0,0,0,0.5);
+    --cor-sombra-modal: rgba(0,0,0,0.6);
+
+    --cor-fonte: #03e9f4;
+    --cor-branco: #FFFFFF;
+    --cor-preto: #000000;
+    --cor-nav: #636362;
+
+    --cor-linha-principal: #FFFAFA;
+    --cor-linha-secundaria: #F5F5F5;
+
+    --fonte: "SUSE", system-ui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-fundo);
+    font-family: var(--fonte);
+    font-size: 16px;
+}
+
+header {
+    background-color: var(--cor-nav);
+    color: var(--cor-branco);
+}
+
+#navdetudo {
+    display: flex;
+    align-items: center;
+}
+
+#navdetudo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+#navdetudo ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding-right: 100px;
+    
+}
+
+#navdetudo ul li {
+    padding: 15px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#navdetudo ul li:hover {
+    background-color: #03e9f4;
+    border-radius: 12px;
+    padding: 15px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#navdetudo ul li a {
+    text-decoration: none;
+    color: var(--cor-modal);
+    font-weight: bold;
+}
+
+.dashH1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5vh;
+}
+
+.dashH2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 8vh;
+}
+
+.caixinha-container {
+    display: flex;
+    justify-content: space-between; /* Distribui as caixas uma em cada lado */
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.caixinha {
+    background-color: var(--cor-nav);
+    color: var(--cor-fonte);
+    padding: 30px;
+    border-radius: 8px;
+    width: 90vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caixinha span {
+    display: block;
+    font-size: 24px;
+    color: var(--cor-branco);
+    margin-top: 5px;
+}
+
+.moeda-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.moeda-card {
+    background-color: var(--cor-nav);
+    color: var(--cor-branco);
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.moeda-card img {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.moeda-card h3 {
+    color: var(--cor-fonte);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.moeda-card p {
+    font-size: 14px;
+    color: var(--cor-branco);
+    margin: 5px 0;
+}
+

@@ -44,30 +44,17 @@ public class UsuarioBO {
 	}
 
     // Método para atualizar um usuário existente com verificação
-	public boolean atualizarUsuarioBO(InputStream usuarioInputStream) {
-		boolean resultado = false;
-		UsuarioDAO usuarioDAO = new UsuarioDAO();
-		UsuarioVO usuarioVO = null;
-		try {
-			String usuarioJSON = new String(this.converterByteParaArray(usuarioInputStream), StandardCharsets.UTF_8);
+public boolean atualizarUsuarioBO(UsuarioVO usuarioVO) {
+        boolean resultado = false;
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
 
-			ObjectMapper objectMapper = new ObjectMapper();
-			objectMapper.findAndRegisterModules();
-			usuarioVO = objectMapper.readValue(usuarioJSON, UsuarioVO.class);
-
-			if (usuarioDAO.verificarCadastroUsuarioDAO(usuarioVO)) {
-				resultado = usuarioDAO.atualizarUsuarioDAO(usuarioVO);
-			} else {
-				System.out.println("Pessoa não consta na base de dados");
-			} 
-
-		} catch (FileNotFoundException erro) {
-			System.out.println(erro);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return resultado;
-	}
+            if (usuarioDAO.verificarCadastroUsuarioDAO(usuarioVO)) {
+                resultado = usuarioDAO.atualizarUsuarioDAO(usuarioVO);
+            } else {
+                System.out.println("Pessoa não consta na base de dados");
+            } 
+        return resultado;
+    }
 
     // Método para exclusão de usuário
 	public boolean excluirUsuarioBO(UsuarioVO UsuarioVO) {

@@ -30,9 +30,9 @@ public class UsuarioController {
     @Path("/atualizar")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Boolean atualizarUsuarioController(@FormDataParam("usuarioVO") InputStream usuarioInputStream) throws Exception {
+public Boolean atualizarUsuarioController(UsuarioVO usuarioVO) {
         UsuarioBO usuarioBO = new UsuarioBO();
-        return usuarioBO.atualizarUsuarioBO(usuarioInputStream);
+        return usuarioBO.atualizarUsuarioBO(usuarioVO);
     }
 
     @DELETE

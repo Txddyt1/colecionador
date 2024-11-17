@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Date;
 
 import model.vo.UsuarioVO;
 
@@ -38,7 +39,7 @@ public class UsuarioDAO {
 	// insert usuário
 	public UsuarioVO cadastrarUsuarioDAO(UsuarioVO usuarioVO) {
 		
-		String query = "INSERT INTO usuario (nome, email, login, senha) VALUES (?, ?, ?, ?)";
+		String query = "INSERT INTO usuario (nome, email, login, senha, datacadastro) VALUES (?, ?, ?, ?, ?)";
 		
 		Connection conn = Banco.getConnection();
 		PreparedStatement ppstmt = Banco.getPreparedStatementWithPk(conn, query);
@@ -49,6 +50,7 @@ public class UsuarioDAO {
 			ppstmt.setString(2, usuarioVO.getEmail());
 			ppstmt.setString(3, usuarioVO.getLogin());
 			ppstmt.setString(4, usuarioVO.getSenha());
+			ppstmt.setDate(5, Date.valueOf(java.time.LocalDate.now()));
 			ppstmt.execute();
 			resultado = ppstmt.getGeneratedKeys();
 			if (resultado.next()) {

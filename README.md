@@ -1,0 +1,2 @@
+Neste projeto acadêmico, realizamos o desenvolvimento de um pequeno sistema de colecionáveis, onde o usuário consegue se cadastrar, logar, cadastrar um item, editar um item, excluir um item e visualizar a soma dos valores de seus colecionáveis e a quantidade deles dentro do dashboard.
+Pra desenvolver essa aplicação usamos tecnologias como HTML, CSS E JavaScript para fazer o Front-End, para o Back-End utilizamos Java para desenvolvimento dos códigos usando o modelo MVC se comunicando com um banco de dados MySQL.
